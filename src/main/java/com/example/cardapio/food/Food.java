@@ -2,14 +2,14 @@ package com.example.cardapio.food;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.math.BigDecimal;
 
 @Table(name = "foods")
 @Entity(name = "foods")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -24,7 +24,7 @@ public class Food {
     private String image;
 
     @JsonProperty("price")
-    private String price;
+    private BigDecimal price;
 
     public Food(FoodRequestDTO food){
         this.image = food.image();

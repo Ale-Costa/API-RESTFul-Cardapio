@@ -1,4 +1,5 @@
 package com.example.cardapio.food;
 
-public record FoodRequestDTO(String title, String image, String price) {
+import java.math.BigDecimal;
+public record FoodRequestDTO(String title, String image, BigDecimal price) {
 }
